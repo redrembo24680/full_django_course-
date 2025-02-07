@@ -59,7 +59,7 @@
                                 <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
                                 <li><a class="dropdown-item  text-white" href="users/profile.html">Особистий кабинет</a>
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="#">Адмін панель</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Адмін панель</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -88,14 +88,9 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Всі товари</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Кухня</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Спальня</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Вітальня</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Офіс</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Фурнітура</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Декор</a></li>
-                    </ul>
+                        {% for category in categories %}
+                            <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">{{ category.name }}</a></li>
+                        {% endfor %}
                 </div>
                 <!-- Значок корзини, викликає модельне вікно -->
                 <div>
