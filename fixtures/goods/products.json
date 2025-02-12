@@ -1,0 +1,170 @@
+[
+{
+  "model": "goods.products",
+  "pk": 1,
+  "fields": {
+    "name": "Чайний столик і три стільці",
+    "slag": "chajnij-stolik-i-tri-stilci",
+    "description": "Комплект із трьох стільців і дизайнерський столик для вітальні.",
+    "image": "goods_images/set_of_tea_table_and_three_chairs.jpg",
+    "price": "150.00",
+    "discount": "10.00",
+    "quantity": 10,
+    "category": 2
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 2,
+  "fields": {
+    "name": "Чайний столик і два стільці",
+    "slag": "chajnij-stolik-i-dva-stilci",
+    "description": "Набір із столу та двох стільців у мінімалістичному стилі.",
+    "image": "goods_images/set_of_tea_table_and_two_chairs.jpg",
+    "price": "93.00",
+    "discount": "0.00",
+    "quantity": 16,
+    "category": 2
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 3,
+  "fields": {
+    "name": "Двоспальне ліжко",
+    "slag": "dvospalne-lizhko",
+    "description": "Двоспальне ліжко з узголів’ям, дуже ортопедичне.",
+    "image": "goods_images/double_bed.jpg",
+    "price": "670.00",
+    "discount": "5.00",
+    "quantity": 2,
+    "category": 3
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 4,
+  "fields": {
+    "name": "Кухонний стіл з раковиною",
+    "slag": "kuhonnij-stil-z-rakovinoyu",
+    "description": "Кухонний обідній стіл із вбудованою раковиною та стільцями.",
+    "image": "goods_images/kitchen_table.jpg",
+    "price": "365.00",
+    "discount": "0.00",
+    "quantity": 4,
+    "category": 2
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 5,
+  "fields": {
+    "name": "Кухонний стіл з вбудованою плитою",
+    "slag": "kuhonnij-stil-z-vbudovanoyu-plitoyu",
+    "description": "Кухонний стіл із вбудованою плитою та раковиною. Багато полиць і стильний дизайн.",
+    "image": "goods_images/kitchen_table_2.jpg",
+    "price": "430.00",
+    "discount": "15.00",
+    "quantity": 4,
+    "category": 2
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 6,
+  "fields": {
+    "name": "Кутовий диван для вітальні",
+    "slag": "kutovij-divan-dlya-vitalni",
+    "description": "Кутовий диван, що розкладається у двоспальне ліжко. Ідеально для прийому гостей!",
+    "image": "goods_images/corner_sofa.jpg",
+    "price": "610.00",
+    "discount": "50.00",
+    "quantity": 6,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 7,
+  "fields": {
+    "name": "Приліжковий столик",
+    "slag": "prilizhkovij-stolik",
+    "description": "Приліжковий столик із двома висувними шухлядами (квітка не входить у комплект).",
+    "image": "goods_images/bedside_table.jpg",
+    "price": "55.00",
+    "discount": "0.00",
+    "quantity": 20,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 8,
+  "fields": {
+    "name": "Звичайний диван",
+    "slag": "zvichajnij-divan",
+    "description": "Звичайний диван, він же софа. Нічого особливого.",
+    "image": "goods_images/sofa.jpg",
+    "price": "190.00",
+    "discount": "30.00",
+    "quantity": 8,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 9,
+  "fields": {
+    "name": "Офісний стілець",
+    "slag": "ofisnij-stilec",
+    "description": "Зручний офісний стілець для роботи.",
+    "image": "goods_images/office_chair.jpg",
+    "price": "30.00",
+    "discount": "0.00",
+    "quantity": 40,
+    "category": 5
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 10,
+  "fields": {
+    "name": "Рослина",
+    "slag": "roslina",
+    "description": "Рослина для декору, що створює атмосферу свіжості та спокою.",
+    "image": "goods_images/plants.jpg",
+    "price": "10.00",
+    "discount": "20.00",
+    "quantity": 100,
+    "category": 7
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 11,
+  "fields": {
+    "name": "Стилізована квітка",
+    "slag": "stilizovana-kvitka",
+    "description": "Дизайнерська квітка (можливо, штучна) для прикрашення інтер’єру.",
+    "image": "goods_images/flower.jpg",
+    "price": "15.00",
+    "discount": "2.50",
+    "quantity": 60,
+    "category": 7
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 12,
+  "fields": {
+    "name": "Незвичний приліжковий столик",
+    "slag": "nezvichnij-prilizhkovij-stolik",
+    "description": "Досить дивний на вигляд столик, але чудово підходить для спальні.",
+    "image": "goods_images/strange_table.jpg",
+    "price": "25.00",
+    "discount": "25.00",
+    "quantity": 15,
+    "category": 3
+  }
+}
+]
