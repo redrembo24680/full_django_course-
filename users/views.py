@@ -18,9 +18,14 @@ def login(request):
             username = request.POST['username']
             password = request.POST['password']
             user = auth.authenticate(username=username, password=password)
+            
             if user:
                 auth.login(request, user)
                 messages.success(request, f'{username}, Ви успішно ввійшли в акаунт')
+
+                if request.POST.get('next', None):
+                    return HttpResponseRedirect(request.POST.get('next'))
+            
                 return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserLoginForm()
@@ -58,6 +63,7 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, f'Профіль успішно змінено')
+            
             return HttpResponseRedirect(reverse('user:profile'))
     else:
         form = ProfileForm(instance=request.user)
@@ -67,6 +73,9 @@ def profile(request):
         'form':form
     }
     return render(request, 'users/profile.html', context)
+
+def users_cart(request):
+    return render(request, 'users/users_cart.html')
 
 @login_required
 def logout(request):
