@@ -21,19 +21,31 @@ def cart_add(request):
                 cart.save()
         else:
             Cart.objects.create(user=request.user, product=product, quantity=1)
+    else:
+        carts = Cart.objects.filter(
+            session_key=request.session.session_key, product=product)
 
-        user_cart = get_user_carts(request)
+        if carts.exists():
+            cart = carts.first()
+            if cart:
+                cart.quantity += 1
+                cart.save()
+        else:
+            Cart.objects.create(
+                session_key=request.session.session_key, product=product, quantity=1)
 
-        cart_item_html = render_to_string(
-            "carts/includes/included_cart.html", {"carts":user_cart}, request=request
-        )
+    user_cart = get_user_carts(request)
 
-        response_data = {
-            "message": "Товар доданий в корзину",
-            "cart_items_html":cart_item_html,
-        }
+    cart_item_html = render_to_string(
+        "carts/includes/included_cart.html", {"carts":user_cart}, request=request
+    )
 
-        return JsonResponse(response_data)
+    response_data = {
+        "message": "Товар доданий в корзину",
+        "cart_items_html":cart_item_html,
+    }
+
+    return JsonResponse(response_data)
     
 
 def cart_change(request):
