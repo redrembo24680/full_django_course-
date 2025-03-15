@@ -3,10 +3,11 @@ from django.db import transaction
 from django.forms import ValidationError
 from django.shortcuts import redirect, render
 from carts.models import Cart
- 
+from django.contrib.auth.decorators import login_required
 from orders.forms import CreateOrderForm
 from orders.models import Order, OrderItem
 
+@login_required
 def create_order(request):
     if request.method == 'POST':
          form = CreateOrderForm(data=request.POST)
@@ -17,7 +18,7 @@ def create_order(request):
                      cart_items = Cart.objects.filter(user=user)
  
                      if cart_items.exists():
-                         # Создать заказ
+                         
                          order = Order.objects.create(
                              user=user,
                              phone_number=form.cleaned_data['phone_number'],
@@ -25,7 +26,7 @@ def create_order(request):
                              delivery_address=form.cleaned_data['delivery_address'],
                              payment_on_get=form.cleaned_data['payment_on_get'],
                          )
-                         # Создать заказанные товары
+                         
                          for cart_item in cart_items:
                              product=cart_item.product
                              name=cart_item.product.name
@@ -65,5 +66,6 @@ def create_order(request):
     context = {
          'title': 'Home - Оформлення замовлення',
          'form': form,
+         'order':True,
      }
     return render(request, 'orders/create_order.html', context=context)
